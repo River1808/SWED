@@ -7,7 +7,6 @@ public class User {
     private String name;
     private String email;
     
-    // Relationships managed via collections matching multiplicities
     private List<Subscription> subscriptions;
     private List<NotifPreference> preferences;
 
@@ -20,7 +19,7 @@ public class User {
     }
 
     public void register() {
-        System.out.println("User " + name + " (" + userID + ") has successfully registered to the monitoring platform.");
+        System.out.println("User " + name + " (" + userID + ") has successfully registered ");
     }
 
     public void manageSub(Subscription sub, NotifPreference pref) {
@@ -29,7 +28,6 @@ public class User {
         System.out.println("Added new subscription tracking: " + sub.url + " with frequency [" + pref.frequency + "]");
     }
 
-    // Getters to allow monitoring execution engines to loop over user tasks
     public List<Subscription> getSubscriptions() { return subscriptions; }
     public List<NotifPreference> getPreferences() { return preferences; }
     public String getName() { return name; }
